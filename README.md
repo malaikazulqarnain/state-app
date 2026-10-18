@@ -1,16 +1,17 @@
-# React + Vite
+# State Management App (Zustand)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React + Vite app demonstrating global state with Zustand and polished UI states.
 
-Currently, two official plugins are available:
+## State Management
+- Global store: `src/store/useTaskStore.js` (tasks, loading, error, actions)
+- Task list and Navbar pending-count read from the same store, no prop-drilling
+- Selectors used so components re-render only when their slice changes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## UI Polish
+- Skeleton loader while fetching
+- Empty state when there are no tasks
+- Error state with retry button
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Run locally
+npm install
+npm run dev
